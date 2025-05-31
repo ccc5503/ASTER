@@ -11,3 +11,5 @@ This folder concludes the further revised version of PyTorch implementation of o
 - **NYPD**: [https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i](https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i)
 
 - **EMS**: [https://data.cityofnewyork.us/Public-Safety/EMS-Incident-Dispatch-Data/76xm-jjuj](https://data.cityofnewyork.us/Public-Safety/EMS-Incident-Dispatch-Data/76xm-jjuj)
+
+- **XTraffic**: [https://www.kaggle.com/datasets/gpxlcj/xtraffic](https://www.kaggle.com/datasets/gpxlcj/xtraffic)
