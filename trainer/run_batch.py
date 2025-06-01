@@ -214,15 +214,13 @@ def construct_rl_state(hidden_rep, res_state, batch_size, location_tensor):
     location_tensor: [N, 2]
      [B, N*(C_common+4)]
     """
-    # res_state 的两列代表资源状态和 cooldown 状态
-    location = location_tensor  # 假定 location_tensor 形状为 [N, 2]
+
     rl_state = torch.cat(
         [hidden_rep, res_state, location], dim=-1
-    )  # shape: [N, C_common+4]
+    )  
     return rl_state.view(
         batch_size, -1
-    )  # 当 batch_size == 1，则变为 [1, N*(C_common+4)]
-
+    )  
 
 def update_inputs(target, st_input, lt_input, k):
     """
@@ -255,9 +253,8 @@ def compute_sample_reward(
     target = target[:k]
     target_bin = (target > 0.5).float()  # [K, N, 1]
     gt_event_count = (target_bin.max(dim=0).values > 0.5).sum()
-    target_agg = target_bin.max(dim=0).values  # [1, N, 1] -> [N, 1]
-    target_agg = target_agg.squeeze(-1)  # [N]
-    action = action.float()  # [N]
+    target_agg = target_bin.max(dim=0).values
+    action = action.float() 
 
     has_resource = prev_state[:, 0] == 1
     cooldown = prev_state[:, 1]
