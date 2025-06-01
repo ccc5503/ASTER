@@ -13,3 +13,8 @@ This folder concludes the further revised version of PyTorch implementation of o
 - **EMS**: [https://data.cityofnewyork.us/Public-Safety/EMS-Incident-Dispatch-Data/76xm-jjuj](https://data.cityofnewyork.us/Public-Safety/EMS-Incident-Dispatch-Data/76xm-jjuj)
 
 - **XTraffic**: [https://www.kaggle.com/datasets/gpxlcj/xtraffic](https://www.kaggle.com/datasets/gpxlcj/xtraffic)
+
+
+## Training Example
+```bash
+python train.py --config my_config.yaml
