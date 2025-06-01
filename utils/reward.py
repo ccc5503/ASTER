@@ -66,18 +66,15 @@ def compute_resource_reallocation_cost(state1, state2, distance_matrix):
     return total_cost, (supply_indices[row_ind], demand_indices[col_ind])
 
 def set_random_seeds(seed=42):
-    """设置所有随机种子以确保实验可重现性"""
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     
-    # 确保确定性行为（可能会影响性能）
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
     
-    # 设置环境变量
     os.environ['PYTHONHASHSEED'] = str(seed)
 
 
