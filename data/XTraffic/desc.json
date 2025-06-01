@@ -1,0 +1,37 @@
+{
+    "name": "Orange-Sensor-Incidents",
+    "domain": "traffic incidents",
+    "shape": [
+        4371,
+        131,
+        3
+    ],
+    "num_time_steps": 4371,
+    "num_nodes": 131,
+    "num_features": 3,
+    "feature_description": [
+        "accident_occurred ",
+        "hour_of_day / 24",
+        "weekday / 7"
+    ],
+    "has_graph": true,
+    "frequency (minutes)": 120,
+    "node_id_type": "sensor_station_id",
+    "regular_settings": {
+        "INPUT_LEN": 24,
+        "OUTPUT_LEN": 1,
+        "TRAIN_VAL_TEST_RATIO": [
+            0.7,
+            0.1,
+            0.2
+        ],
+        "NORM_EACH_CHANNEL": false,
+        "RESCALE": true,
+        "METRICS": [
+            "MAE",
+            "RMSE",
+            "MAPE"
+        ],
+        "NULL_VAL": 0.0
+    }
+}

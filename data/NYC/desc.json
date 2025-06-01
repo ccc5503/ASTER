@@ -1,0 +1,43 @@
+{
+    "name": "NYC-Accidents",
+    "domain": "traffic accidents",
+    "shape": [
+        5808,
+        225,
+        3
+    ],
+    "num_time_steps": 5808,
+    "num_nodes": 225,
+    "num_features": 3,
+    "feature_description": [
+        "accident count",
+        "hour of day (normalized)",
+        "day of week (normalized)"
+    ],
+    "has_graph": true,
+    "frequency (minutes)": 60,
+    "grid_size_km": 3,
+    "nyc_bounds": {
+        "min_lat": 40.4961,
+        "max_lat": 40.9155,
+        "min_lon": -74.2557,
+        "max_lon": -73.6895
+    },
+    "regular_settings": {
+        "INPUT_LEN": 24,
+        "OUTPUT_LEN": 1,
+        "TRAIN_VAL_TEST_RATIO": [
+            0.7,
+            0.1,
+            0.2
+        ],
+        "NORM_EACH_CHANNEL": false,
+        "RESCALE": true,
+        "METRICS": [
+            "MAE",
+            "RMSE",
+            "MAPE"
+        ],
+        "NULL_VAL": 0.0
+    }
+}
