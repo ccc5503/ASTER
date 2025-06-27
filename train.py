@@ -67,8 +67,7 @@ def train(run_dir):
 
         stop, best_sr, patience_counter = early_stopping_check(
             current_sr, best_sr, patience_counter, 
-            threshold=0.28, 
-            patience=1000, 
+            patience=20, 
             logger=logger,
             dual_predictor=dual_predictor,
             agent=agent
